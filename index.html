@@ -2,43 +2,305 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hecho con Amor 🎀</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hecho con Amor | Lazos Personalizados</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif;
+        }
+
+        body{
+            background:#fff8fb;
+            color:#333;
+            overflow-x:hidden;
+        }
+
+        /* HEADER */
+        header{
+            width:100%;
+            min-height:70vh;
+            background:linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.7)),
+            url('lazo1.jpeg') center/cover no-repeat;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:20px;
+        }
+
+        header h1{
+            font-size:4rem;
+            color:#d63384;
+            margin-bottom:10px;
+            text-shadow:0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        header p{
+            font-size:1.2rem;
+            color:#555;
+            max-width:600px;
+        }
+
+        .btn-principal{
+            margin-top:25px;
+            padding:15px 35px;
+            background:#d63384;
+            color:white;
+            text-decoration:none;
+            border-radius:50px;
+            font-weight:600;
+            transition:0.3s;
+            box-shadow:0 10px 25px rgba(214,51,132,0.3);
+        }
+
+        .btn-principal:hover{
+            transform:translateY(-3px);
+            background:#b82a70;
+        }
+
+        /* SECTION TITLE */
+        .section-title{
+            text-align:center;
+            margin:70px 20px 40px;
+        }
+
+        .section-title h2{
+            font-size:2.3rem;
+            color:#d63384;
+        }
+
+        .section-title p{
+            color:#777;
+            margin-top:10px;
+        }
+
+        /* GALERIA */
+        .galeria{
+            width:90%;
+            max-width:1300px;
+            margin:auto;
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+            gap:25px;
+            padding-bottom:60px;
+        }
+
+        .card{
+            background:white;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        .card img{
+            width:100%;
+            height:320px;
+            object-fit:cover;
+        }
+
+        .card-content{
+            padding:18px;
+        }
+
+        .card-content h3{
+            color:#d63384;
+            margin-bottom:8px;
+        }
+
+        .card-content p{
+            color:#666;
+            font-size:0.95rem;
+        }
+
+        /* INFO */
+        .info{
+            background:white;
+            padding:70px 20px;
+            text-align:center;
+        }
+
+        .info h2{
+            color:#d63384;
+            font-size:2rem;
+            margin-bottom:15px;
+        }
+
+        .info p{
+            max-width:700px;
+            margin:auto;
+            color:#666;
+            line-height:1.7;
+        }
+
+        /* WHATSAPP */
+        .whatsapp-container{
+            display:flex;
+            justify-content:center;
+            margin-top:35px;
+        }
+
+        .btn-whatsapp{
+            background:#25D366;
+            color:white;
+            text-decoration:none;
+            padding:16px 35px;
+            border-radius:50px;
+            font-weight:600;
+            font-size:1rem;
+            box-shadow:0 10px 25px rgba(37,211,102,0.3);
+            transition:0.3s;
+        }
+
+        .btn-whatsapp:hover{
+            transform:scale(1.05);
+        }
+
+        /* FOOTER */
+        footer{
+            background:#d63384;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:50px;
+        }
+
+        footer p{
+            font-size:0.95rem;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px){
+
+            header h1{
+                font-size:2.7rem;
+            }
+
+            header p{
+                font-size:1rem;
+            }
+
+            .section-title h2{
+                font-size:1.8rem;
+            }
+
+            .card img{
+                height:260px;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
+
+    <!-- HERO -->
     <header>
         <h1>Hecho con Amor 🎀</h1>
-        <p>Lazos personalizados hechos a mano</p>
+        <p>
+            Lazos personalizados hechos a mano con elegancia,
+            delicadeza y amor en cada detalle.
+        </p>
+
+        <a href="https://wa.me/18099727422?text=Hola,%20me%20interesan%20sus%20lazos%20personalizados"
+           class="btn-principal">
+            Hacer Pedido
+        </a>
     </header>
 
-    <div class="carousel-container">
-        <div class="carousel-slide" id="slide">
-            <img src="lazo1.jpeg" alt="Lazo 1">
-            <img src="lazo2.jpeg" alt="Lazo 2">
-            <img src="lazo3.jpeg" alt="Lazo 3">
-            <img src="lazo4.jpeg" alt="Lazo 4">
-            <img src="lazo5.jpeg" alt="Lazo 5">
-            <img src="lazo6.jpeg" alt="Lazo 6">
-            <img src="lazo7.jpeg" alt="Lazo 7">
-            <img src="lazo8.jpeg" alt="Lazo 8">
-            <img src="lazo9.jpeg" alt="Lazo 9">
-            <img src="lazo10.jpeg" alt="Lazo 10">
-            <img src="lazo11.jpeg" alt="Lazo 11">
-            <img src="lazo12.jpeg" alt="Lazo 12">
+    <!-- GALERIA -->
+    <section class="section-title">
+        <h2>Nuestra Colección</h2>
+        <p>Diseños únicos y personalizados para cada ocasión</p>
+    </section>
+
+    <section class="galeria">
+
+        <div class="card">
+            <img src="lazo1.jpeg" alt="Lazo personalizado">
+            <div class="card-content">
+                <h3>Lazo Elegante</h3>
+                <p>Diseño delicado ideal para ocasiones especiales.</p>
+            </div>
         </div>
-        <button class="nav-btn" id="prevBtn">❮</button>
-        <button class="nav-btn" id="nextBtn">❯</button>
-    </div>
 
-    <div class="info-negocio">
-        <p>✨ Calidad y delicadeza en cada detalle ✨</p>
-        <a href="https://wa.me/18099727422?text=Hola!%20Me%20interesan%20tus%20lazos" class="btn-whatsapp">
-            Pedir por WhatsApp 📱
-        </a>
-    </div>
+        <div class="card">
+            <img src="lazo2.jpeg" alt="Lazo personalizado">
+            <div class="card-content">
+                <h3>Diseño Premium</h3>
+                <p>Acabados de alta calidad hechos artesanalmente.</p>
+            </div>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="card">
+            <img src="lazo3.jpeg" alt="Lazo personalizado">
+            <div class="card-content">
+                <h3>Edición Exclusiva</h3>
+                <p>Detalles únicos con materiales cuidadosamente seleccionados.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="lazo4.jpeg" alt="Lazo personalizado">
+            <div class="card-content">
+                <h3>Estilo Infantil</h3>
+                <p>Perfecto para niñas y eventos especiales.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="lazo5.jpeg" alt="Lazo personalizado">
+            <div class="card-content">
+                <h3>Modelo Floral</h3>
+                <p>Inspirado en diseños modernos y femeninos.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="lazo6.jpeg" alt="Lazo personalizado">
+            <div class="card-content">
+                <h3>Diseño Deluxe</h3>
+                <p>Elegancia y sofisticación en cada creación.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- INFO -->
+    <section class="info">
+        <h2>¿Por qué elegirnos?</h2>
+
+        <p>
+            En Hecho con Amor nos especializamos en crear lazos
+            personalizados con acabados de calidad y diseños exclusivos.
+            Cada pieza es elaborada cuidadosamente para brindar un producto
+            elegante, duradero y especial.
+        </p>
+
+        <div class="whatsapp-container">
+            <a href="https://wa.me/18099727422?text=Hola,%20quiero%20información%20sobre%20los%20lazos"
+               class="btn-whatsapp">
+               Pedir por WhatsApp 📱
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Hecho con Amor • Todos los derechos reservados</p>
+    </footer>
+
 </body>
-
 </html>
