@@ -1,306 +1,615 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hecho con Amor | Lazos Personalizados</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hecho con Amor | Boutique de Lazos</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:'Poppins', sans-serif;
-        }
+<style>
 
-        body{
-            background:#fff8fb;
-            color:#333;
-            overflow-x:hidden;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
 
-        /* HEADER */
-        header{
-            width:100%;
-            min-height:70vh;
-            background:linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.7)),
-            url('lazo1.jpeg') center/cover no-repeat;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        header h1{
-            font-size:4rem;
-            color:#d63384;
-            margin-bottom:10px;
-            text-shadow:0 4px 10px rgba(0,0,0,0.1);
-        }
+body{
+    background:#fff;
+    color:#222;
+    overflow-x:hidden;
+}
 
-        header p{
-            font-size:1.2rem;
-            color:#555;
-            max-width:600px;
-        }
+/* =========================
+   NAVBAR
+========================= */
 
-        .btn-principal{
-            margin-top:25px;
-            padding:15px 35px;
-            background:#d63384;
-            color:white;
-            text-decoration:none;
-            border-radius:50px;
-            font-weight:600;
-            transition:0.3s;
-            box-shadow:0 10px 25px rgba(214,51,132,0.3);
-        }
+nav{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,0.75);
+    border-bottom:1px solid rgba(0,0,0,0.05);
+}
 
-        .btn-principal:hover{
-            transform:translateY(-3px);
-            background:#b82a70;
-        }
+.nav-container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-        /* SECTION TITLE */
-        .section-title{
-            text-align:center;
-            margin:70px 20px 40px;
-        }
+.logo{
+    font-size:1.6rem;
+    font-weight:700;
+    color:#d63384;
+}
 
-        .section-title h2{
-            font-size:2.3rem;
-            color:#d63384;
-        }
+.nav-links{
+    display:flex;
+    gap:35px;
+}
 
-        .section-title p{
-            color:#777;
-            margin-top:10px;
-        }
+.nav-links a{
+    text-decoration:none;
+    color:#444;
+    font-weight:500;
+    transition:0.3s;
+}
 
-        /* GALERIA */
-        .galeria{
-            width:90%;
-            max-width:1300px;
-            margin:auto;
-            display:grid;
-            grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-            gap:25px;
-            padding-bottom:60px;
-        }
+.nav-links a:hover{
+    color:#d63384;
+}
 
-        .card{
-            background:white;
-            border-radius:20px;
-            overflow:hidden;
-            box-shadow:0 10px 30px rgba(0,0,0,0.08);
-            transition:0.3s;
-        }
+/* =========================
+   HERO
+========================= */
 
-        .card:hover{
-            transform:translateY(-8px);
-        }
+.hero{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:120px 8%;
+    background:
+    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.9)),
+    url('lazo1.jpeg') center/cover no-repeat;
+}
 
-        .card img{
-            width:100%;
-            height:320px;
-            object-fit:cover;
-        }
+.hero-container{
+    width:100%;
+    max-width:1400px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
 
-        .card-content{
-            padding:18px;
-        }
+.hero-text h1{
+    font-size:4.5rem;
+    line-height:1.1;
+    margin-bottom:25px;
+    color:#111;
+}
 
-        .card-content h3{
-            color:#d63384;
-            margin-bottom:8px;
-        }
+.hero-text h1 span{
+    color:#d63384;
+}
 
-        .card-content p{
-            color:#666;
-            font-size:0.95rem;
-        }
+.hero-text p{
+    color:#555;
+    font-size:1.1rem;
+    line-height:1.8;
+    max-width:600px;
+}
 
-        /* INFO */
-        .info{
-            background:white;
-            padding:70px 20px;
-            text-align:center;
-        }
+.hero-buttons{
+    margin-top:35px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
 
-        .info h2{
-            color:#d63384;
-            font-size:2rem;
-            margin-bottom:15px;
-        }
+.btn-primary{
+    background:#d63384;
+    color:white;
+    padding:16px 34px;
+    border-radius:60px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+    box-shadow:0 10px 30px rgba(214,51,132,0.3);
+}
 
-        .info p{
-            max-width:700px;
-            margin:auto;
-            color:#666;
-            line-height:1.7;
-        }
+.btn-primary:hover{
+    transform:translateY(-5px);
+    background:#bb2c73;
+}
 
-        /* WHATSAPP */
-        .whatsapp-container{
-            display:flex;
-            justify-content:center;
-            margin-top:35px;
-        }
+.btn-secondary{
+    border:2px solid #d63384;
+    color:#d63384;
+    padding:16px 34px;
+    border-radius:60px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
 
-        .btn-whatsapp{
-            background:#25D366;
-            color:white;
-            text-decoration:none;
-            padding:16px 35px;
-            border-radius:50px;
-            font-weight:600;
-            font-size:1rem;
-            box-shadow:0 10px 25px rgba(37,211,102,0.3);
-            transition:0.3s;
-        }
+.btn-secondary:hover{
+    background:#d63384;
+    color:white;
+}
 
-        .btn-whatsapp:hover{
-            transform:scale(1.05);
-        }
+.hero-card{
+    background:white;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 25px 60px rgba(0,0,0,0.12);
+}
 
-        /* FOOTER */
-        footer{
-            background:#d63384;
-            color:white;
-            text-align:center;
-            padding:20px;
-            margin-top:50px;
-        }
+.hero-card img{
+    width:100%;
+    height:650px;
+    object-fit:cover;
+}
 
-        footer p{
-            font-size:0.95rem;
-        }
+/* =========================
+   SECTION
+========================= */
 
-        /* RESPONSIVE */
-        @media(max-width:768px){
+.section{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    padding:100px 0;
+}
 
-            header h1{
-                font-size:2.7rem;
-            }
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
 
-            header p{
-                font-size:1rem;
-            }
+.section-title span{
+    color:#d63384;
+    font-weight:700;
+    letter-spacing:2px;
+    font-size:0.9rem;
+}
 
-            .section-title h2{
-                font-size:1.8rem;
-            }
+.section-title h2{
+    font-size:3rem;
+    margin-top:10px;
+    color:#111;
+}
 
-            .card img{
-                height:260px;
-            }
-        }
+.section-title p{
+    margin-top:15px;
+    color:#666;
+}
 
-    </style>
+/* =========================
+   PRODUCTS
+========================= */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.product-card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    transition:0.4s;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    position:relative;
+}
+
+.product-card:hover{
+    transform:translateY(-10px);
+}
+
+.product-image{
+    width:100%;
+    height:350px;
+    overflow:hidden;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.product-card:hover img{
+    transform:scale(1.08);
+}
+
+.product-info{
+    padding:25px;
+}
+
+.product-info h3{
+    font-size:1.3rem;
+    margin-bottom:10px;
+}
+
+.product-info p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.product-price{
+    color:#d63384;
+    font-size:1.4rem;
+    font-weight:700;
+}
+
+.badge{
+    position:absolute;
+    top:20px;
+    left:20px;
+    background:#d63384;
+    color:white;
+    padding:8px 16px;
+    border-radius:50px;
+    font-size:0.8rem;
+    font-weight:600;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:30px;
+    box-shadow:0 25px 50px rgba(0,0,0,0.12);
+}
+
+.about-text h2{
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.about-text p{
+    color:#666;
+    line-height:1.9;
+    margin-bottom:20px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:linear-gradient(135deg,#d63384,#ff7eb6);
+    padding:90px 30px;
+    border-radius:35px;
+    text-align:center;
+    color:white;
+}
+
+.cta h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.cta p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.btn-whatsapp{
+    background:white;
+    color:#25D366;
+    padding:18px 38px;
+    border-radius:60px;
+    text-decoration:none;
+    font-weight:700;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.btn-whatsapp:hover{
+    transform:scale(1.05);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    margin-top:100px;
+    background:#111;
+    color:#bbb;
+    padding:40px 20px;
+    text-align:center;
+}
+
+footer h3{
+    color:white;
+    margin-bottom:15px;
+}
+
+footer p{
+    margin-top:10px;
+    line-height:1.8;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+    .hero-container,
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .hero-text{
+        text-align:center;
+    }
+
+    .hero-text p{
+        margin:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .hero-text h1{
+        font-size:3.2rem;
+    }
+
+    .hero-card img{
+        height:500px;
+    }
+}
+
+@media(max-width:768px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero-text h1{
+        font-size:2.5rem;
+    }
+
+    .section-title h2,
+    .about-text h2,
+    .cta h2{
+        font-size:2rem;
+    }
+
+    .hero{
+        padding-top:140px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-    <!-- HERO -->
-    <header>
-        <h1>Hecho con Amor 🎀</h1>
-        <p>
-            Lazos personalizados hechos a mano con elegancia,
-            delicadeza y amor en cada detalle.
-        </p>
+<!-- NAVBAR -->
+<nav>
+    <div class="nav-container">
+        <div class="logo">Hecho con Amor 🎀</div>
 
-        <a href="https://wa.me/18099727422?text=Hola,%20me%20interesan%20sus%20lazos%20personalizados"
-           class="btn-principal">
-            Hacer Pedido
-        </a>
-    </header>
+        <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#coleccion">Colección</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </div>
+</nav>
 
-    <!-- GALERIA -->
-    <section class="section-title">
-        <h2>Nuestra Colección</h2>
-        <p>Diseños únicos y personalizados para cada ocasión</p>
-    </section>
+<!-- HERO -->
+<section class="hero" id="inicio">
 
-    <section class="galeria">
+    <div class="hero-container">
 
-        <div class="card">
-            <img src="lazo1.jpeg" alt="Lazo personalizado">
-            <div class="card-content">
-                <h3>Lazo Elegante</h3>
-                <p>Diseño delicado ideal para ocasiones especiales.</p>
+        <div class="hero-text">
+            <h1>
+                Lazos únicos<br>
+                hechos <span>con amor</span>
+            </h1>
+
+            <p>
+                Diseños exclusivos elaborados artesanalmente con materiales
+                premium y acabados elegantes. Creamos accesorios únicos
+                para niñas, eventos especiales y ocasiones inolvidables.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#coleccion" class="btn-primary">
+                    Ver Colección
+                </a>
+
+                <a href="https://wa.me/18099727422?text=Hola,%20quiero%20información%20sobre%20los%20lazos"
+                class="btn-secondary">
+                    WhatsApp
+                </a>
+
             </div>
         </div>
 
-        <div class="card">
-            <img src="lazo2.jpeg" alt="Lazo personalizado">
-            <div class="card-content">
-                <h3>Diseño Premium</h3>
-                <p>Acabados de alta calidad hechos artesanalmente.</p>
+        <div class="hero-card">
+            <img src="lazo1.jpeg" alt="Lazo Premium">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="coleccion">
+
+    <div class="section-title">
+        <span>COLECCIÓN EXCLUSIVA</span>
+        <h2>Nuestros Diseños</h2>
+        <p>Elegancia, delicadeza y calidad en cada detalle</p>
+    </div>
+
+    <div class="products">
+
+        <div class="product-card">
+            <div class="badge">Nuevo</div>
+
+            <div class="product-image">
+                <img src="lazo2.jpeg" alt="">
+            </div>
+
+            <div class="product-info">
+                <h3>Lazo Princesa</h3>
+                <p>
+                    Diseño delicado con acabados premium y detalles exclusivos.
+                </p>
+
+                <div class="product-price">RD$ 450</div>
             </div>
         </div>
 
-        <div class="card">
-            <img src="lazo3.jpeg" alt="Lazo personalizado">
-            <div class="card-content">
-                <h3>Edición Exclusiva</h3>
-                <p>Detalles únicos con materiales cuidadosamente seleccionados.</p>
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="lazo3.jpeg" alt="">
+            </div>
+
+            <div class="product-info">
+                <h3>Colección Floral</h3>
+                <p>
+                    Inspirado en tendencias modernas y elegantes.
+                </p>
+
+                <div class="product-price">RD$ 550</div>
             </div>
         </div>
 
-        <div class="card">
-            <img src="lazo4.jpeg" alt="Lazo personalizado">
-            <div class="card-content">
-                <h3>Estilo Infantil</h3>
-                <p>Perfecto para niñas y eventos especiales.</p>
+        <div class="product-card">
+
+            <div class="badge">Popular</div>
+
+            <div class="product-image">
+                <img src="lazo4.jpeg" alt="">
+            </div>
+
+            <div class="product-info">
+                <h3>Luxury Edition</h3>
+                <p>
+                    Acabados artesanales con materiales de alta calidad.
+                </p>
+
+                <div class="product-price">RD$ 650</div>
             </div>
         </div>
 
-        <div class="card">
-            <img src="lazo5.jpeg" alt="Lazo personalizado">
-            <div class="card-content">
-                <h3>Modelo Floral</h3>
-                <p>Inspirado en diseños modernos y femeninos.</p>
-            </div>
-        </div>
+    </div>
 
-        <div class="card">
-            <img src="lazo6.jpeg" alt="Lazo personalizado">
-            <div class="card-content">
-                <h3>Diseño Deluxe</h3>
-                <p>Elegancia y sofisticación en cada creación.</p>
-            </div>
-        </div>
+</section>
 
-    </section>
+<!-- ABOUT -->
+<section class="section" id="nosotros">
 
-    <!-- INFO -->
-    <section class="info">
-        <h2>¿Por qué elegirnos?</h2>
+    <div class="about">
 
-        <p>
-            En Hecho con Amor nos especializamos en crear lazos
-            personalizados con acabados de calidad y diseños exclusivos.
-            Cada pieza es elaborada cuidadosamente para brindar un producto
-            elegante, duradero y especial.
-        </p>
+        <img src="lazo5.jpeg" alt="Hecho con Amor">
 
-        <div class="whatsapp-container">
-            <a href="https://wa.me/18099727422?text=Hola,%20quiero%20información%20sobre%20los%20lazos"
-               class="btn-whatsapp">
-               Pedir por WhatsApp 📱
+        <div class="about-text">
+
+            <h2>Elegancia artesanal en cada creación</h2>
+
+            <p>
+                En Hecho con Amor transformamos ideas en accesorios únicos.
+                Cada lazo es elaborado cuidadosamente para ofrecer calidad,
+                delicadeza y exclusividad.
+            </p>
+
+            <p>
+                Nos especializamos en diseños personalizados para niñas,
+                cumpleaños, eventos especiales y regalos únicos.
+            </p>
+
+            <a href="https://wa.me/18099727422?text=Hola,%20quiero%20hacer%20un%20pedido"
+            class="btn-primary">
+                Solicitar Pedido
             </a>
-        </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Hecho con Amor • Todos los derechos reservados</p>
-    </footer>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="section" id="contacto">
+
+    <div class="cta">
+
+        <h2>Haz tu pedido hoy 🎀</h2>
+
+        <p>
+            Contáctanos directamente por WhatsApp y recibe atención personalizada
+            para crear el diseño perfecto.
+        </p>
+
+        <a href="https://wa.me/18099727422?text=Hola,%20me%20interesan%20sus%20lazos"
+        class="btn-whatsapp">
+            Pedir por WhatsApp 📱
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <h3>Hecho con Amor 🎀</h3>
+
+    <p>
+        Boutique de lazos personalizados hechos artesanalmente
+        con elegancia y delicadeza.
+    </p>
+
+    <p>
+        © 2026 Todos los derechos reservados
+    </p>
+
+</footer>
 
 </body>
 </html>
