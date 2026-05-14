@@ -27,9 +27,7 @@ body{
     overflow-x:hidden;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 
 nav{
     width:100%;
@@ -38,7 +36,7 @@ nav{
     left:0;
     z-index:1000;
     backdrop-filter:blur(15px);
-    background:rgba(255,255,255,0.75);
+    background:rgba(255,255,255,0.85);
     border-bottom:1px solid rgba(0,0,0,0.05);
 }
 
@@ -74,9 +72,7 @@ nav{
     color:#d63384;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
     width:100%;
@@ -86,7 +82,7 @@ nav{
     justify-content:center;
     padding:120px 8%;
     background:
-    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.9)),
+    linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.9)),
     url('lazo1.jpeg') center/cover no-repeat;
 }
 
@@ -168,9 +164,7 @@ nav{
     object-fit:cover;
 }
 
-/* =========================
-   SECTION
-========================= */
+/* SECTION */
 
 .section{
     width:90%;
@@ -202,9 +196,7 @@ nav{
     color:#666;
 }
 
-/* =========================
-   PRODUCTS
-========================= */
+/* PRODUCTS */
 
 .products{
     display:grid;
@@ -257,12 +249,6 @@ nav{
     margin-bottom:20px;
 }
 
-.product-price{
-    color:#d63384;
-    font-size:1.4rem;
-    font-weight:700;
-}
-
 .badge{
     position:absolute;
     top:20px;
@@ -275,9 +261,7 @@ nav{
     font-weight:600;
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* ABOUT */
 
 .about{
     display:grid;
@@ -303,9 +287,7 @@ nav{
     margin-bottom:20px;
 }
 
-/* =========================
-   CTA
-========================= */
+/* CTA */
 
 .cta{
     background:linear-gradient(135deg,#d63384,#ff7eb6);
@@ -342,9 +324,7 @@ nav{
     transform:scale(1.05);
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
     margin-top:100px;
@@ -364,9 +344,7 @@ footer p{
     line-height:1.8;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media(max-width:1000px){
 
@@ -423,9 +401,13 @@ footer p{
 <body>
 
 <!-- NAVBAR -->
+
 <nav>
     <div class="nav-container">
-        <div class="logo">Hecho con Amor 🎀</div>
+
+        <div class="logo">
+            Hecho con Amor 🎀
+        </div>
 
         <div class="nav-links">
             <a href="#inicio">Inicio</a>
@@ -433,24 +415,28 @@ footer p{
             <a href="#nosotros">Nosotros</a>
             <a href="#contacto">Contacto</a>
         </div>
+
     </div>
 </nav>
 
 <!-- HERO -->
+
 <section class="hero" id="inicio">
 
     <div class="hero-container">
 
         <div class="hero-text">
+
             <h1>
                 Lazos únicos<br>
                 hechos <span>con amor</span>
             </h1>
 
             <p>
-                Diseños exclusivos elaborados artesanalmente con materiales
-                premium y acabados elegantes. Creamos accesorios únicos
-                para niñas, eventos especiales y ocasiones inolvidables.
+                Diseños exclusivos elaborados artesanalmente
+                con materiales premium y acabados elegantes.
+                Creamos accesorios únicos para niñas,
+                eventos especiales y ocasiones inolvidables.
             </p>
 
             <div class="hero-buttons">
@@ -465,6 +451,7 @@ footer p{
                 </a>
 
             </div>
+
         </div>
 
         <div class="hero-card">
@@ -475,33 +462,60 @@ footer p{
 
 </section>
 
-<!-- PRODUCTS -->
+<!-- COLECCION -->
+
 <section class="section" id="coleccion">
 
     <div class="section-title">
+
         <span>COLECCIÓN EXCLUSIVA</span>
-        <h2>Nuestros Diseños</h2>
-        <p>Elegancia, delicadeza y calidad en cada detalle</p>
+
+        <h2>
+            Nuestros Diseños
+        </h2>
+
+        <p>
+            Elegancia, delicadeza y calidad en cada detalle
+        </p>
+
     </div>
 
     <div class="products">
 
+        <!-- PRODUCTO 1 -->
+
         <div class="product-card">
-            <div class="badge">Nuevo</div>
+
+            <div class="badge">
+                Nuevo
+            </div>
 
             <div class="product-image">
                 <img src="lazo2.jpeg" alt="">
             </div>
 
             <div class="product-info">
-                <h3>Lazo Princesa</h3>
+
+                <h3>
+                    Lazo Princesa
+                </h3>
+
                 <p>
-                    Diseño delicado con acabados premium y detalles exclusivos.
+                    Diseño delicado con acabados premium
+                    y detalles exclusivos.
                 </p>
 
-                <div class="product-price">RD$ 450</div>
+                <a href="https://wa.me/18099727422?text=Hola,%20me%20interesa%20el%20Lazo%20Princesa"
+                class="btn-primary"
+                style="padding:12px 22px; font-size:0.9rem;">
+                    Consultar Diseño
+                </a>
+
             </div>
+
         </div>
+
+        <!-- PRODUCTO 2 -->
 
         <div class="product-card">
 
@@ -510,31 +524,57 @@ footer p{
             </div>
 
             <div class="product-info">
-                <h3>Colección Floral</h3>
+
+                <h3>
+                    Colección Floral
+                </h3>
+
                 <p>
-                    Inspirado en tendencias modernas y elegantes.
+                    Inspirado en tendencias modernas
+                    y elegantes.
                 </p>
 
-                <div class="product-price">RD$ 550</div>
+                <a href="https://wa.me/18099727422?text=Hola,%20me%20interesa%20la%20Colección%20Floral"
+                class="btn-primary"
+                style="padding:12px 22px; font-size:0.9rem;">
+                    Consultar Diseño
+                </a>
+
             </div>
+
         </div>
+
+        <!-- PRODUCTO 3 -->
 
         <div class="product-card">
 
-            <div class="badge">Popular</div>
+            <div class="badge">
+                Popular
+            </div>
 
             <div class="product-image">
                 <img src="lazo4.jpeg" alt="">
             </div>
 
             <div class="product-info">
-                <h3>Luxury Edition</h3>
+
+                <h3>
+                    Luxury Edition
+                </h3>
+
                 <p>
-                    Acabados artesanales con materiales de alta calidad.
+                    Acabados artesanales con materiales
+                    de alta calidad.
                 </p>
 
-                <div class="product-price">RD$ 650</div>
+                <a href="https://wa.me/18099727422?text=Hola,%20me%20interesa%20el%20Luxury%20Edition"
+                class="btn-primary"
+                style="padding:12px 22px; font-size:0.9rem;">
+                    Consultar Diseño
+                </a>
+
             </div>
+
         </div>
 
     </div>
@@ -542,6 +582,7 @@ footer p{
 </section>
 
 <!-- ABOUT -->
+
 <section class="section" id="nosotros">
 
     <div class="about">
@@ -550,17 +591,22 @@ footer p{
 
         <div class="about-text">
 
-            <h2>Elegancia artesanal en cada creación</h2>
+            <h2>
+                Elegancia artesanal
+                en cada creación
+            </h2>
 
             <p>
-                En Hecho con Amor transformamos ideas en accesorios únicos.
-                Cada lazo es elaborado cuidadosamente para ofrecer calidad,
-                delicadeza y exclusividad.
+                En Hecho con Amor transformamos ideas
+                en accesorios únicos. Cada lazo es
+                elaborado cuidadosamente para ofrecer
+                calidad, delicadeza y exclusividad.
             </p>
 
             <p>
-                Nos especializamos en diseños personalizados para niñas,
-                cumpleaños, eventos especiales y regalos únicos.
+                Nos especializamos en diseños personalizados
+                para niñas, cumpleaños, eventos especiales
+                y regalos únicos.
             </p>
 
             <a href="https://wa.me/18099727422?text=Hola,%20quiero%20hacer%20un%20pedido"
@@ -574,16 +620,20 @@ footer p{
 
 </section>
 
-<!-- CTA -->
+<!-- CONTACTO -->
+
 <section class="section" id="contacto">
 
     <div class="cta">
 
-        <h2>Haz tu pedido hoy 🎀</h2>
+        <h2>
+            Haz tu pedido hoy 🎀
+        </h2>
 
         <p>
-            Contáctanos directamente por WhatsApp y recibe atención personalizada
-            para crear el diseño perfecto.
+            Contáctanos directamente por WhatsApp
+            y recibe atención personalizada para
+            crear el diseño perfecto.
         </p>
 
         <a href="https://wa.me/18099727422?text=Hola,%20me%20interesan%20sus%20lazos"
@@ -596,13 +646,17 @@ footer p{
 </section>
 
 <!-- FOOTER -->
+
 <footer>
 
-    <h3>Hecho con Amor 🎀</h3>
+    <h3>
+        Hecho con Amor 🎀
+    </h3>
 
     <p>
-        Boutique de lazos personalizados hechos artesanalmente
-        con elegancia y delicadeza.
+        Boutique de lazos personalizados
+        hechos artesanalmente con elegancia
+        y delicadeza.
     </p>
 
     <p>
