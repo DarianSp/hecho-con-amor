@@ -519,57 +519,102 @@ nav{
     </button>
 </div>
 
-<!-- SCRIPT CORREGIDO -->
 <script>
 
 let favorites = [];
 
-document.querySelectorAll('.favorite-btn').forEach(button => {
+/* =========================
+   CREAR NUMEROS AUTOMATICOS
+========================= */
+
+const cards = document.querySelectorAll('.product-card');
+
+cards.forEach((card, index) => {
+
+    const numberTag = document.createElement('div');
+
+    numberTag.classList.add('product-number');
+
+    numberTag.innerHTML = "#" + (index + 1);
+
+    card.appendChild(numberTag);
+
+});
+
+/* =========================
+   FAVORITOS
+========================= */
+
+const favoriteButtons = document.querySelectorAll('.favorite-btn');
+
+favoriteButtons.forEach((button, index) => {
 
     button.addEventListener('click', () => {
 
         const card = button.closest('.product-card');
+
         const product = card.getAttribute('data-product');
+
+        const number = index + 1;
 
         button.classList.toggle('active');
 
-        if (button.classList.contains('active')) {
+        if(button.classList.contains('active')){
 
             button.innerHTML = '❤';
 
-            if (!favorites.includes(product)) {
-                favorites.push(product);
+            const item = "#" + number + " - " + product;
+
+            if(!favorites.includes(item)){
+
+                favorites.push(item);
+
             }
 
-        } else {
+        }else{
 
             button.innerHTML = '♡';
 
-            favorites = favorites.filter(item => item !== product);
+            favorites = favorites.filter(item =>
+                item !== "#" + number + " - " + product
+            );
+
         }
+
     });
 
 });
 
-function sendWhatsAppSelection() {
+/* =========================
+   ENVIAR WHATSAPP
+========================= */
 
-    if (favorites.length === 0) {
+function sendWhatsAppSelection(){
+
+    if(favorites.length === 0){
+
         alert("Selecciona al menos un producto ❤️");
+
         return;
+
     }
 
-    let message = "Hola 🎀 Me interesan estos productos:%0A%0A";
+    let message =
+    "Hola 🎀 Me interesan estos productos:%0A%0A";
 
     favorites.forEach(item => {
+
         message += "• " + item + "%0A";
+
     });
 
     const phone = "18099727422";
 
     window.open(
-        `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
+        `https://wa.me/${phone}?text=${message}`,
         '_blank'
     );
+
 }
 
 </script>
