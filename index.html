@@ -153,20 +153,7 @@ nav{
     color:white;
 }
 
-.hero-card{
-    background:white;
-    border-radius:35px;
-    overflow:hidden;
-    box-shadow:0 25px 60px rgba(0,0,0,0.12);
-}
-
-.hero-card img{
-    width:100%;
-    height:650px;
-    object-fit:cover;
-}
-
-/* SECTIONS */
+/* SECTION */
 
 .section{
     width:90%;
@@ -206,7 +193,7 @@ nav{
 
 .category-title{
     text-align:center;
-    margin-bottom:45px;
+    margin-bottom:50px;
     font-size:2.3rem;
     color:#d63384;
 }
@@ -215,7 +202,7 @@ nav{
 
 .products{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:35px;
 }
 
@@ -223,7 +210,6 @@ nav{
     background:white;
     border-radius:28px;
     overflow:hidden;
-    position:relative;
     transition:0.4s;
     box-shadow:0 18px 40px rgba(0,0,0,0.08);
 }
@@ -234,7 +220,7 @@ nav{
 
 .product-image{
     width:100%;
-    height:350px;
+    height:340px;
     overflow:hidden;
 }
 
@@ -247,59 +233,6 @@ nav{
 
 .product-card:hover img{
     transform:scale(1.08);
-}
-
-.product-info{
-    padding:28px;
-}
-
-.product-info h3{
-    margin-bottom:12px;
-    font-size:1.35rem;
-}
-
-.product-info p{
-    color:#666;
-    line-height:1.8;
-    margin-bottom:22px;
-}
-
-.badge{
-    position:absolute;
-    top:20px;
-    left:20px;
-    background:#d63384;
-    color:white;
-    padding:8px 16px;
-    border-radius:50px;
-    font-size:0.8rem;
-    font-weight:600;
-}
-
-/* ABOUT */
-
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.about img{
-    width:100%;
-    border-radius:30px;
-    box-shadow:0 25px 50px rgba(0,0,0,0.12);
-}
-
-.about-text h2{
-    font-size:3rem;
-    margin-bottom:25px;
-}
-
-.about-text p{
-    color:#666;
-    line-height:1.9;
-    margin-bottom:20px;
 }
 
 /* CTA */
@@ -354,40 +287,7 @@ footer h3{
     margin-bottom:15px;
 }
 
-footer p{
-    margin-top:10px;
-    line-height:1.8;
-}
-
 /* RESPONSIVE */
-
-@media(max-width:1000px){
-
-    .hero-container,
-    .about{
-        grid-template-columns:1fr;
-    }
-
-    .hero-text{
-        text-align:center;
-    }
-
-    .hero-text p{
-        margin:auto;
-    }
-
-    .hero-buttons{
-        justify-content:center;
-    }
-
-    .hero-text h1{
-        font-size:3.3rem;
-    }
-
-    .hero-card img{
-        height:500px;
-    }
-}
 
 @media(max-width:768px){
 
@@ -403,9 +303,7 @@ footer p{
         font-size:2.5rem;
     }
 
-    .section-title h2,
-    .about-text h2,
-    .cta h2{
+    .section-title h2{
         font-size:2rem;
     }
 
@@ -433,7 +331,6 @@ footer p{
         <div class="nav-links">
             <a href="#inicio">Inicio</a>
             <a href="#coleccion">Colección</a>
-            <a href="#nosotros">Nosotros</a>
             <a href="#contacto">Contacto</a>
         </div>
 
@@ -457,8 +354,6 @@ footer p{
             <p>
                 Diseños exclusivos elaborados artesanalmente
                 con materiales premium y acabados elegantes.
-                Creamos lazos, bendas y coronas para niñas
-                y ocasiones inolvidables.
             </p>
 
             <div class="hero-buttons">
@@ -474,10 +369,6 @@ footer p{
 
             </div>
 
-        </div>
-
-        <div class="hero-card">
-            <img src="lazo1.jpeg" alt="">
         </div>
 
     </div>
@@ -497,7 +388,7 @@ footer p{
         </h2>
 
         <p>
-            Elegancia, delicadeza y calidad en cada detalle
+            Todos nuestros productos organizados por categorías
         </p>
 
     </div>
@@ -512,89 +403,16 @@ footer p{
 
         <div class="products">
 
-            <div class="product-card">
-
-                <div class="badge">
-                    Nuevo
-                </div>
-
-                <div class="product-image">
-                    <img src="lazo2.jpeg" alt="">
-                </div>
-
-                <div class="product-info">
-
-                    <h3>
-                        Lazo Princesa
-                    </h3>
-
-                    <p>
-                        Diseños elegantes y personalizados
-                        hechos artesanalmente.
-                    </p>
-
-                    <a href="https://wa.me/18099727422"
-                    class="btn-primary">
-                        Consultar
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="product-card">
-
-                <div class="product-image">
-                    <img src="lazo5.jpeg" alt="">
-                </div>
-
-                <div class="product-info">
-
-                    <h3>
-                        Luxury Bow
-                    </h3>
-
-                    <p>
-                        Acabados premium y detalles delicados.
-                    </p>
-
-                    <a href="https://wa.me/18099727422"
-                    class="btn-primary">
-                        Consultar
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="product-card">
-
-                <div class="badge">
-                    Popular
-                </div>
-
-                <div class="product-image">
-                    <img src="lazo10.jpeg" alt="">
-                </div>
-
-                <div class="product-info">
-
-                    <h3>
-                        Floral Edition
-                    </h3>
-
-                    <p>
-                        Inspirado en tendencias modernas y elegantes.
-                    </p>
-
-                    <a href="https://wa.me/18099727422"
-                    class="btn-primary">
-                        Consultar
-                    </a>
-
-                </div>
-
-            </div>
+            <div class="product-card"><div class="product-image"><img src="lazo1.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="lazo2.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="lazo3.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="lazo4.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="lazo5.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="lazo6.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="lazo7.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="lazo8.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="lazo9.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="lazo10.jpeg"></div></div>
 
         </div>
 
@@ -610,88 +428,14 @@ footer p{
 
         <div class="products">
 
-            <div class="product-card">
-
-                <div class="badge">
-                    Elegante
-                </div>
-
-                <div class="product-image">
-                    <img src="benda1.jpeg" alt="">
-                </div>
-
-                <div class="product-info">
-
-                    <h3>
-                        Benda Elegance
-                    </h3>
-
-                    <p>
-                        Diseños delicados para ocasiones especiales.
-                    </p>
-
-                    <a href="https://wa.me/18099727422"
-                    class="btn-primary">
-                        Consultar
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="product-card">
-
-                <div class="product-image">
-                    <img src="benda5.jpeg" alt="">
-                </div>
-
-                <div class="product-info">
-
-                    <h3>
-                        Premium Headband
-                    </h3>
-
-                    <p>
-                        Materiales suaves y acabados exclusivos.
-                    </p>
-
-                    <a href="https://wa.me/18099727422"
-                    class="btn-primary">
-                        Consultar
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="product-card">
-
-                <div class="badge">
-                    Nuevo
-                </div>
-
-                <div class="product-image">
-                    <img src="benda9.jpeg" alt="">
-                </div>
-
-                <div class="product-info">
-
-                    <h3>
-                        Soft Collection
-                    </h3>
-
-                    <p>
-                        Diseños modernos con estilo delicado.
-                    </p>
-
-                    <a href="https://wa.me/18099727422"
-                    class="btn-primary">
-                        Consultar
-                    </a>
-
-                </div>
-
-            </div>
+            <div class="product-card"><div class="product-image"><img src="benda1.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="benda2.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="benda3.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="benda4.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="benda5.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="benda6.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="benda7.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="benda8.jpeg"></div></div>
 
         </div>
 
@@ -707,126 +451,35 @@ footer p{
 
         <div class="products">
 
-            <div class="product-card">
-
-                <div class="badge">
-                    Exclusivo
-                </div>
-
-                <div class="product-image">
-                    <img src="corona1.jpeg" alt="">
-                </div>
-
-                <div class="product-info">
-
-                    <h3>
-                        Corona Royal
-                    </h3>
-
-                    <p>
-                        Coronas brillantes con acabados elegantes.
-                    </p>
-
-                    <a href="https://wa.me/18099727422"
-                    class="btn-primary">
-                        Consultar
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="product-card">
-
-                <div class="product-image">
-                    <img src="corona5.jpeg" alt="">
-                </div>
-
-                <div class="product-info">
-
-                    <h3>
-                        Princess Crown
-                    </h3>
-
-                    <p>
-                        Perfectas para cumpleaños y sesiones de fotos.
-                    </p>
-
-                    <a href="https://wa.me/18099727422"
-                    class="btn-primary">
-                        Consultar
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="product-card">
-
-                <div class="badge">
-                    Premium
-                </div>
-
-                <div class="product-image">
-                    <img src="corona7.jpeg" alt="">
-                </div>
-
-                <div class="product-info">
-
-                    <h3>
-                        Luxury Crown
-                    </h3>
-
-                    <p>
-                        Diseños exclusivos con estilo sofisticado.
-                    </p>
-
-                    <a href="https://wa.me/18099727422"
-                    class="btn-primary">
-                        Consultar
-                    </a>
-
-                </div>
-
-            </div>
+            <div class="product-card"><div class="product-image"><img src="corona1.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="corona2.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="corona4.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="corona5.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="corona6.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="corona7.jpeg"></div></div>
 
         </div>
 
     </div>
 
-</section>
+    <!-- ================= CINTILLOS ================= -->
 
-<!-- ABOUT -->
+    <div class="category-section">
 
-<section class="section" id="nosotros">
+        <h2 class="category-title">
+            💖 Cintillos
+        </h2>
 
-    <div class="about">
+        <div class="products">
 
-        <img src="lazo3.jpeg" alt="">
-
-        <div class="about-text">
-
-            <h2>
-                Elegancia artesanal
-                en cada creación
-            </h2>
-
-            <p>
-                En Hecho con Amor transformamos ideas
-                en accesorios únicos. Cada pieza es
-                elaborada cuidadosamente para ofrecer
-                calidad, delicadeza y exclusividad.
-            </p>
-
-            <p>
-                Nos especializamos en diseños personalizados
-                para niñas, cumpleaños y eventos especiales.
-            </p>
-
-            <a href="https://wa.me/18099727422"
-            class="btn-primary">
-                Solicitar Pedido
-            </a>
+            <div class="product-card"><div class="product-image"><img src="cintillo2.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="cintillo3.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="cintillo4.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="cintillo5.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="cintillo6.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="cintillo7.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="cintillo8.jpeg"></div></div>
+            <div class="product-card"><div class="product-image"><img src="cintillo9.jpeg"></div></div>
 
         </div>
 
@@ -846,8 +499,7 @@ footer p{
 
         <p>
             Contáctanos directamente por WhatsApp
-            y recibe atención personalizada para
-            crear el diseño perfecto.
+            y recibe atención personalizada.
         </p>
 
         <a href="https://wa.me/18099727422"
@@ -868,8 +520,7 @@ footer p{
     </h3>
 
     <p>
-        Boutique artesanal de accesorios personalizados
-        hechos con elegancia y delicadeza.
+        Boutique artesanal de accesorios personalizados.
     </p>
 
     <p>
