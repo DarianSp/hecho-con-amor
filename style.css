@@ -73,3 +73,98 @@ header h1 { color: #d63384; margin: 0; font-size: 1.8rem; }
 }
 
 .btn-whatsapp:active { transform: scale(0.95); }
+
+/* PRODUCTOS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    width:92%;
+    max-width:1200px;
+    margin:30px auto;
+}
+
+.product-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    background:#fff;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.product-image img{
+    width:100%;
+    display:block;
+    aspect-ratio:1/1;
+    object-fit:cover;
+}
+
+/* BOTON FAVORITO */
+
+.favorite-btn{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,0.95);
+    cursor:pointer;
+    font-size:1.4rem;
+    transition:0.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    z-index:100;
+}
+
+.favorite-btn:hover{
+    transform:scale(1.1);
+}
+
+.favorite-btn.active{
+    background:#ffe3ef;
+    color:#d63384;
+}
+
+/* NUMERO */
+
+.product-number{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#d63384;
+    color:white;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    z-index:100;
+}
+
+/* BOTON FLOTANTE */
+
+.selection-box{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    z-index:9999;
+}
+
+.send-selection{
+    background:#25d366;
+    color:white;
+    border:none;
+    padding:16px 24px;
+    border-radius:50px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 10px 25px rgba(37,211,102,0.35);
+}
+
+.send-selection:hover{
+    transform:translateY(-3px);
+}
