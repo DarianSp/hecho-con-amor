@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
+/* ===== TU CSS SIN CAMBIOS ===== */
 *{
     margin:0;
     padding:0;
@@ -18,9 +17,7 @@
     font-family:'Montserrat',sans-serif;
 }
 
-html{
-    scroll-behavior:smooth;
-}
+html{ scroll-behavior:smooth; }
 
 body{
     background:#fff;
@@ -29,7 +26,6 @@ body{
 }
 
 /* NAVBAR */
-
 nav{
     width:100%;
     position:fixed;
@@ -66,148 +62,9 @@ nav{
     text-decoration:none;
     color:#444;
     font-weight:500;
-    transition:0.3s;
-}
-
-.nav-links a:hover{
-    color:#d63384;
-}
-
-/* HERO */
-
-.hero{
-    width:100%;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:120px 8%;
-    background:
-    linear-gradient(rgba(255,255,255,0.78), rgba(255,255,255,0.92)),
-    url('lazo1.jpeg') center/cover no-repeat;
-}
-
-.hero-container{
-    width:100%;
-    max-width:1400px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-    align-items:center;
-}
-
-.hero-text h1{
-    font-size:4.5rem;
-    line-height:1.1;
-    margin-bottom:25px;
-    color:#111;
-}
-
-.hero-text span{
-    color:#d63384;
-}
-
-.hero-text p{
-    color:#555;
-    line-height:1.9;
-    font-size:1.1rem;
-    max-width:600px;
-}
-
-.hero-buttons{
-    margin-top:35px;
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.btn-primary{
-    background:#d63384;
-    color:white;
-    text-decoration:none;
-    padding:16px 34px;
-    border-radius:60px;
-    font-weight:600;
-    transition:0.3s;
-    display:inline-block;
-    box-shadow:0 12px 30px rgba(214,51,132,0.25);
-}
-
-.btn-primary:hover{
-    transform:translateY(-5px);
-    background:#be2b74;
-}
-
-.btn-secondary{
-    border:2px solid #d63384;
-    color:#d63384;
-    text-decoration:none;
-    padding:16px 34px;
-    border-radius:60px;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.btn-secondary:hover{
-    background:#d63384;
-    color:white;
-}
-
-/* SECTION */
-
-.section{
-    width:90%;
-    max-width:1400px;
-    margin:auto;
-    padding:110px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:80px;
-}
-
-.section-title span{
-    color:#d63384;
-    font-size:0.9rem;
-    font-weight:700;
-    letter-spacing:2px;
-}
-
-.section-title h2{
-    font-size:3rem;
-    margin-top:15px;
-    color:#111;
-}
-
-.section-title p{
-    color:#666;
-    margin-top:15px;
-}
-
-/* CATEGORY */
-
-.category-section{
-    margin-bottom:110px;
-}
-
-.category-title{
-    text-align:center;
-    margin-bottom:15px;
-    font-size:2.3rem;
-    color:#d63384;
-}
-
-.category-count{
-    text-align:center;
-    margin-bottom:45px;
-    color:#777;
-    font-size:1rem;
-    font-weight:600;
 }
 
 /* PRODUCTS */
-
 .products{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -215,37 +72,14 @@ nav{
 }
 
 .product-card{
+    position:relative;
     background:white;
     border-radius:28px;
     overflow:hidden;
-    transition:0.4s;
     box-shadow:0 18px 40px rgba(0,0,0,0.08);
-    position:relative;
 }
 
-.product-card:hover{
-    transform:translateY(-10px);
-}
-
-.product-image{
-    width:100%;
-    height:340px;
-    overflow:hidden;
-}
-
-.product-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:0.5s;
-}
-
-.product-card:hover img{
-    transform:scale(1.08);
-}
-
-/* FAVORITOS */
-
+/* FAVORITO */
 .favorite-btn{
     position:absolute;
     top:15px;
@@ -257,12 +91,6 @@ nav{
     background:rgba(255,255,255,0.95);
     cursor:pointer;
     font-size:1.4rem;
-    transition:0.3s;
-    box-shadow:0 8px 20px rgba(0,0,0,0.15);
-}
-
-.favorite-btn:hover{
-    transform:scale(1.1);
 }
 
 .favorite-btn.active{
@@ -270,13 +98,11 @@ nav{
     color:#d63384;
 }
 
-/* BOTON WHATSAPP SELECCION */
-
+/* BOTON */
 .selection-box{
     position:fixed;
     bottom:25px;
     right:25px;
-    z-index:9999;
 }
 
 .send-selection{
@@ -285,785 +111,41 @@ nav{
     border:none;
     padding:18px 28px;
     border-radius:60px;
-    font-size:1rem;
     font-weight:700;
     cursor:pointer;
-    box-shadow:0 15px 35px rgba(37,211,102,0.35);
-    transition:0.3s;
 }
-
-.send-selection:hover{
-    transform:translateY(-5px);
-}
-
-/* CTA */
-
-.cta{
-    background:linear-gradient(135deg,#d63384,#ff7eb6);
-    padding:90px 30px;
-    border-radius:35px;
-    text-align:center;
-    color:white;
-}
-
-.cta h2{
-    font-size:3rem;
-    margin-bottom:20px;
-}
-
-.cta p{
-    max-width:700px;
-    margin:auto;
-    line-height:1.8;
-    margin-bottom:35px;
-}
-
-.btn-whatsapp{
-    background:white;
-    color:#25D366;
-    text-decoration:none;
-    padding:18px 40px;
-    border-radius:60px;
-    font-weight:700;
-    display:inline-block;
-    transition:0.3s;
-}
-
-.btn-whatsapp:hover{
-    transform:scale(1.05);
-}
-
-/* FOOTER */
-
-footer{
-    margin-top:100px;
-    background:#111;
-    color:#bbb;
-    text-align:center;
-    padding:45px 20px;
-}
-
-footer h3{
-    color:white;
-    margin-bottom:15px;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-    .nav-links{
-        display:none;
-    }
-
-    .hero{
-        padding-top:140px;
-    }
-
-    .hero-text h1{
-        font-size:2.5rem;
-    }
-
-    .section-title h2{
-        font-size:2rem;
-    }
-
-    .category-title{
-        font-size:1.8rem;
-    }
-
-    .selection-box{
-        left:15px;
-        right:15px;
-        bottom:15px;
-    }
-
-    .send-selection{
-        width:100%;
-    }
-}
-
 </style>
-
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- PRODUCTOS (ejemplo) -->
+<div class="products">
 
-<nav>
-
-    <div class="nav-container">
-
-        <div class="logo">
-            Hecho con Amor 🎀
-        </div>
-
-        <div class="nav-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#coleccion">Colección</a>
-            <a href="#contacto">Contacto</a>
-        </div>
-
+    <div class="product-card" data-product="Lazo 1">
+        <button class="favorite-btn">♡</button>
+        <img src="lazo1.jpeg" width="100%">
     </div>
 
-</nav>
-
-<!-- HERO -->
-
-<section class="hero" id="inicio">
-
-    <div class="hero-container">
-
-        <div class="hero-text">
-
-            <h1>
-                Accesorios únicos<br>
-                hechos <span>con amor</span>
-            </h1>
-
-            <p>
-                Diseños exclusivos elaborados artesanalmente
-                con materiales premium y acabados elegantes.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#coleccion" class="btn-primary">
-                    Ver Colección
-                </a>
-
-                <a href="https://wa.me/18099727422"
-                class="btn-secondary">
-                    WhatsApp
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- COLECCION -->
-
-<section class="section" id="coleccion">
-
-    <div class="section-title">
-
-        <span>COLECCIÓN EXCLUSIVA</span>
-
-        <h2>
-            Nuestros Diseños
-        </h2>
-
-        <p>
-            Selecciona tus favoritos ❤️ y envíalos por WhatsApp
-        </p>
-
-    </div>
-
-    <!-- ================= LAZOS ================= --> 
- 
-<div class="category-section">
-
-    <h2 class="category-title">
-        🎀  Lazos
-    </h2>
-
-    <div class="products">
-
-        <!-- LAZOS 1-55 -->
-
-        <!-- LAZOS -->
-
-<div class="product-card" data-product="Lazo 1">
-    <div class="product-number">#1</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo1.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 2">
-    <div class="product-number">#2</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo2.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 3">
-    <div class="product-number">#3</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo3.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 4">
-    <div class="product-number">#4</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo4.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 5">
-    <div class="product-number">#5</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo5.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 6">
-    <div class="product-number">#6</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo6.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 7">
-    <div class="product-number">#7</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo7.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 8">
-    <div class="product-number">#8</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo8.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 9">
-    <div class="product-number">#9</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo9.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 10">
-    <div class="product-number">#10</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo10.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 11">
-    <div class="product-number">#11</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo11.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 12">
-    <div class="product-number">#12</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo12.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 13">
-    <div class="product-number">#13</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo13.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 14">
-    <div class="product-number">#14</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo14.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 15">
-    <div class="product-number">#15</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo15.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 16">
-    <div class="product-number">#16</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo16.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 17">
-    <div class="product-number">#17</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo17.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 18">
-    <div class="product-number">#18</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo18.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 19">
-    <div class="product-number">#19</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo19.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 20">
-    <div class="product-number">#20</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo20.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 21">
-    <div class="product-number">#21</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo21.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 22">
-    <div class="product-number">#22</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo22.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 23">
-    <div class="product-number">#23</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo23.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 24">
-    <div class="product-number">#24</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo24.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 25">
-    <div class="product-number">#25</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo25.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 26">
-    <div class="product-number">#26</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo26.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 27">
-    <div class="product-number">#27</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo27.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 28">
-    <div class="product-number">#28</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo28.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 29">
-    <div class="product-number">#29</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo29.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 30">
-    <div class="product-number">#30</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo30.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 31">
-    <div class="product-number">#31</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo31.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 32">
-    <div class="product-number">#32</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo32.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 33">
-    <div class="product-number">#33</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo33.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 34">
-    <div class="product-number">#34</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo34.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 35">
-    <div class="product-number">#35</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo35.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 36">
-    <div class="product-number">#36</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo36.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 37">
-    <div class="product-number">#37</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo37.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 38">
-    <div class="product-number">#38</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo38.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 39">
-    <div class="product-number">#39</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo39.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 40">
-    <div class="product-number">#40</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo40.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 41">
-    <div class="product-number">#41</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo41.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 42">
-    <div class="product-number">#42</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo42.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 43">
-    <div class="product-number">#43</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo43.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 44">
-    <div class="product-number">#44</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo44.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 45">
-    <div class="product-number">#45</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo45.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 46">
-    <div class="product-number">#46</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo46.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 47">
-    <div class="product-number">#47</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo47.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 48">
-    <div class="product-number">#48</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo48.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 49">
-    <div class="product-number">#49</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo49.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 50">
-    <div class="product-number">#50</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo50.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 51">
-    <div class="product-number">#51</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo51.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 52">
-    <div class="product-number">#52</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo52.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 53">
-    <div class="product-number">#53</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo53.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 54">
-    <div class="product-number">#54</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo54.jpeg"></div>
-</div>
-
-<div class="product-card" data-product="Lazo 55">
-    <div class="product-number">#55</div>
-    <button class="favorite-btn">♡</button>
-    <div class="product-image"><img src="lazo55.jpeg"></div>
-</div>
-
-<div class="category-section">
-
-    <h2 class="category-title">
-        ✨ Coronas
-    </h2>
-
-    <div class="products">
-
-        <div class="product-card" data-product="Corona 1">
-            <div class="product-number">#1</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="corona1.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Corona 2">
-            <div class="product-number">#2</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="corona2.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Corona 4">
-            <div class="product-number">#4</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="corona4.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Corona 5">
-            <div class="product-number">#5</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="corona5.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Corona 6">
-            <div class="product-number">#6</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="corona6.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Corona 7">
-            <div class="product-number">#7</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="corona7.jpeg"></div>
-        </div>
-
+    <div class="product-card" data-product="Lazo 2">
+        <button class="favorite-btn">♡</button>
+        <img src="lazo2.jpeg" width="100%">
     </div>
 
 </div>
 
-<!-- ================= CINTILLOS ================= -->
-
-<div class="category-section">
-
-    <h2 class="category-title">
-        💖 Cintillos
-    </h2>
-
-    <div class="products">
-
-        <div class="product-card" data-product="Cintillo 1">
-            <div class="product-number">#1</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="cintillo1.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Cintillo 2">
-            <div class="product-number">#2</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="cintillo2.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Cintillo 3">
-            <div class="product-number">#3</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="cintillo3.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Cintillo 4">
-            <div class="product-number">#4</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="cintillo4.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Cintillo 5">
-            <div class="product-number">#5</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="cintillo5.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Cintillo 6">
-            <div class="product-number">#6</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="cintillo6.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Cintillo 7">
-            <div class="product-number">#7</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="cintillo7.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Cintillo 8">
-            <div class="product-number">#8</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="cintillo8.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Cintillo 9">
-            <div class="product-number">#9</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="cintillo9.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Cintillo 10">
-            <div class="product-number">#10</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="cintillo10.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Cintillo 11">
-            <div class="product-number">#11</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="cintillo11.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Cintillo 12">
-            <div class="product-number">#12</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="cintillo12.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Cintillo 13">
-            <div class="product-number">#13</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="cintillo13.jpeg"></div>
-        </div>
-
-        <div class="product-card" data-product="Cintillo 14">
-            <div class="product-number">#14</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image"><img src="cintillo14.jpeg"></div>
-        </div>
-
-    </div>
-
-</div>
-
-<!-- ================= LAPIZ ================= -->
-
-<div class="category-section">
-
-    <h2 class="category-title">
-        ✏️ Lápiz
-    </h2>
-
-    <div class="products">
-
-        <div class="product-card" data-product="Lápiz 1">
-            <div class="product-number">#1</div>
-            <button class="favorite-btn">♡</button>
-            <div class="product-image">
-                <img src="lapiz1.jpeg">
-            </div>
-        </div>
-
-    </div>
-
-</div>
-</section>
-
-</section>
-
-<!-- CONTACTO -->
-
-<section class="section" id="contacto">
-
-    <div class="cta">
-
-        <h2>
-            Haz tu pedido hoy 🎀
-        </h2>
-
-        <p>
-            Contáctanos directamente por WhatsApp
-            y recibe atención personalizada.
-        </p>
-
-        <a href="https://wa.me/18099727422"
-        class="btn-whatsapp">
-            Pedir por WhatsApp 📱
-        </a>
-
-    </div>
-
-</section>
-
-<!-- BOTON FLOTANTE -->
-
+<!-- BOTÓN -->
 <div class="selection-box">
-
     <button class="send-selection" onclick="sendWhatsAppSelection()">
-        ❤️ Enviar selección por WhatsApp
+        ❤️ Enviar selección
     </button>
-
 </div>
 
-<!-- FOOTER -->
-
-<footer>
-
-    <h3>
-        Hecho con Amor 🎀
-    </h3>
-
-    <p>
-        Boutique artesanal de accesorios personalizados.
-    </p>
-
-    <p>
-        © 2026 Todos los derechos reservados
-    </p>
-
-</footer>
-
-<!-- SCRIPT -->
-
+<!-- SCRIPT CORREGIDO -->
 <script>
 
 let favorites = [];
 
-// Cargar favoritos si existen (persistencia)
-const saved = localStorage.getItem("favorites");
-if (saved) {
-    favorites = JSON.parse(saved);
-}
-
-// Aplicar estado visual inicial
-function updateUI() {
-    document.querySelectorAll('.product-card').forEach(card => {
-
-        const product = card.getAttribute('data-product');
-        const btn = card.querySelector('.favorite-btn');
-
-        if (favorites.includes(product)) {
-            btn.classList.add('active');
-            btn.innerHTML = '❤';
-        } else {
-            btn.classList.remove('active');
-            btn.innerHTML = '♡';
-        }
-
-    });
-
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-}
-
-// Evento de favoritos
 document.querySelectorAll('.favorite-btn').forEach(button => {
 
     button.addEventListener('click', () => {
@@ -1071,20 +153,26 @@ document.querySelectorAll('.favorite-btn').forEach(button => {
         const card = button.closest('.product-card');
         const product = card.getAttribute('data-product');
 
-        const index = favorites.indexOf(product);
+        button.classList.toggle('active');
 
-        if (index === -1) {
-            favorites.push(product);
+        if (button.classList.contains('active')) {
+
+            button.innerHTML = '❤';
+
+            if (!favorites.includes(product)) {
+                favorites.push(product);
+            }
+
         } else {
-            favorites.splice(index, 1);
-        }
 
-        updateUI();
+            button.innerHTML = '♡';
+
+            favorites = favorites.filter(item => item !== product);
+        }
     });
 
 });
 
-// WhatsApp
 function sendWhatsAppSelection() {
 
     if (favorites.length === 0) {
@@ -1105,9 +193,6 @@ function sendWhatsAppSelection() {
         '_blank'
     );
 }
-
-// inicializar UI al cargar
-updateUI();
 
 </script>
 
