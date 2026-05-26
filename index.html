@@ -212,6 +212,7 @@ nav{
     overflow:hidden;
     transition:0.4s;
     box-shadow:0 18px 40px rgba(0,0,0,0.08);
+    position:relative;
 }
 
 .product-card:hover{
@@ -233,6 +234,58 @@ nav{
 
 .product-card:hover img{
     transform:scale(1.08);
+}
+
+/* FAVORITOS */
+
+.favorite-btn{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(10px);
+    font-size:1.4rem;
+    cursor:pointer;
+    z-index:20;
+    transition:0.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.favorite-btn:hover{
+    transform:scale(1.1);
+}
+
+.favorite-btn.active{
+    background:#ff2d75;
+    color:white;
+}
+
+.favorite-bar{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    z-index:999;
+}
+
+.send-whatsapp{
+    background:#25D366;
+    color:white;
+    border:none;
+    padding:18px 30px;
+    border-radius:60px;
+    font-size:1rem;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 15px 35px rgba(37,211,102,0.3);
+    transition:0.3s;
+}
+
+.send-whatsapp:hover{
+    transform:translateY(-5px);
 }
 
 /* CTA */
@@ -310,6 +363,17 @@ footer h3{
     .category-title{
         font-size:1.8rem;
     }
+
+    .send-whatsapp{
+        width:90%;
+        font-size:0.9rem;
+    }
+
+    .favorite-bar{
+        left:50%;
+        transform:translateX(-50%);
+        right:auto;
+    }
 }
 
 </style>
@@ -379,190 +443,180 @@ footer h3{
 
 <section class="section" id="coleccion">
 
-    <div class="section-title">
+<div class="section-title">
 
-        <span>COLECCIÓN EXCLUSIVA</span>
+    <span>COLECCIÓN EXCLUSIVA</span>
 
-        <h2>
-            Nuestros Diseños
-        </h2>
-
-        <p>
-            Todos nuestros productos organizados por categorías
-        </p>
-
-    </div>
-
-    <!-- ================= LAZOS ================= -->
-
-<div class="category-section">
-
-    <h2 class="category-title">
-        🎀 Lazos
+    <h2>
+        Nuestros Diseños
     </h2>
 
-    <div class="products">
-
-        <div class="product-card"><div class="product-image"><img src="lazo1.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo2.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo3.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo4.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo5.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo6.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo7.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo8.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo9.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo10.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo11.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo12.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo13.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo14.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo15.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo16.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo17.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo18.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo19.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo20.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo21.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo22.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo23.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo24.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo25.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo26.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo27.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo28.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo29.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo30.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo31.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo32.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo33.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo34.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo35.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo36.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo37.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo38.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo39.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo40.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo41.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo42.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo43.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo44.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo45.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo46.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo47.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo48.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo49.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo50.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo51.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo52.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo53.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo54.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="lazo55.jpeg"></div></div>
-
-    </div>
+    <p>
+        Marca tus favoritos ❤️ y envíanos tu selección.
+    </p>
 
 </div>
 
-<!-- ================= VENDAS ================= -->
+<!-- LAZOS -->
 
 <div class="category-section">
 
-    <h2 class="category-title">
-        👑 Vendas
-    </h2>
+<h2 class="category-title">
+🎀 Lazos
+</h2>
 
-    <div class="products">
+<div class="products">
 
-        <div class="product-card"><div class="product-image"><img src="benda1.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="benda2.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="benda3.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="benda4.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="benda5.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="benda6.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="benda7.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="benda8.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="benda9.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="benda10.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="benda11.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="benda12.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="benda13.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="benda14.jpeg"></div></div>
+<div class="product-card" data-product="Lazo 1">
+<button class="favorite-btn">♡</button>
+<div class="product-image">
+<img src="lazo1.jpeg">
+</div>
+</div>
 
-    </div>
+<div class="product-card" data-product="Lazo 2">
+<button class="favorite-btn">♡</button>
+<div class="product-image">
+<img src="lazo2.jpeg">
+</div>
+</div>
+
+<div class="product-card" data-product="Lazo 3">
+<button class="favorite-btn">♡</button>
+<div class="product-image">
+<img src="lazo3.jpeg">
+</div>
+</div>
+
+<div class="product-card" data-product="Lazo 4">
+<button class="favorite-btn">♡</button>
+<div class="product-image">
+<img src="lazo4.jpeg">
+</div>
+</div>
+
+<div class="product-card" data-product="Lazo 5">
+<button class="favorite-btn">♡</button>
+<div class="product-image">
+<img src="lazo5.jpeg">
+</div>
+</div>
 
 </div>
 
-<!-- ================= CORONAS ================= -->
+</div>
+
+<!-- VENDAS -->
 
 <div class="category-section">
 
-    <h2 class="category-title">
-        ✨ Coronas
-    </h2>
+<h2 class="category-title">
+👑 Vendas
+</h2>
 
-    <div class="products">
+<div class="products">
 
-        <div class="product-card"><div class="product-image"><img src="corona1.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="corona2.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="corona4.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="corona5.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="corona6.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="corona7.jpeg"></div></div>
+<div class="product-card" data-product="Venda 1">
+<button class="favorite-btn">♡</button>
+<div class="product-image">
+<img src="benda1.jpeg">
+</div>
+</div>
 
-    </div>
+<div class="product-card" data-product="Venda 2">
+<button class="favorite-btn">♡</button>
+<div class="product-image">
+<img src="benda2.jpeg">
+</div>
+</div>
+
+<div class="product-card" data-product="Venda 3">
+<button class="favorite-btn">♡</button>
+<div class="product-image">
+<img src="benda3.jpeg">
+</div>
+</div>
 
 </div>
 
-<!-- ================= CINTILLOS ================= -->
+</div>
+
+<!-- CORONAS -->
 
 <div class="category-section">
 
-    <h2 class="category-title">
-        💖 Cintillos
-    </h2>
+<h2 class="category-title">
+✨ Coronas
+</h2>
 
-    <div class="products">
+<div class="products">
 
-        <div class="product-card"><div class="product-image"><img src="cintillo1.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="cintillo2.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="cintillo3.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="cintillo4.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="cintillo5.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="cintillo6.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="cintillo7.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="cintillo8.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="cintillo9.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="cintillo10.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="cintillo11.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="cintillo12.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="cintillo13.jpeg"></div></div>
-        <div class="product-card"><div class="product-image"><img src="cintillo14.jpeg"></div></div>
+<div class="product-card" data-product="Corona 1">
+<button class="favorite-btn">♡</button>
+<div class="product-image">
+<img src="corona1.jpeg">
+</div>
+</div>
 
-    </div>
+<div class="product-card" data-product="Corona 2">
+<button class="favorite-btn">♡</button>
+<div class="product-image">
+<img src="corona2.jpeg">
+</div>
+</div>
 
 </div>
 
-    <!-- ================= LAPICES ================= -->
+</div>
+
+<!-- CINTILLOS -->
 
 <div class="category-section">
 
-    <h2 class="category-title">
-        ✏️ Lápices
-    </h2>
+<h2 class="category-title">
+💖 Cintillos
+</h2>
 
-    <div class="products">
+<div class="products">
 
-        <div class="product-card">
-            <div class="product-image">
-                <img src="lapiz1.jpeg" alt="">
-            </div>
-        </div>
+<div class="product-card" data-product="Cintillo 1">
+<button class="favorite-btn">♡</button>
+<div class="product-image">
+<img src="cintillo1.jpeg">
+</div>
+</div>
 
-        <div class="product-card">
-            <div class="product-image">
-                <img src="lapiz2.jpeg" alt="">
-            </div>
-        </div>
+<div class="product-card" data-product="Cintillo 2">
+<button class="favorite-btn">♡</button>
+<div class="product-image">
+<img src="cintillo2.jpeg">
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- LAPICES -->
+
+<div class="category-section">
+
+<h2 class="category-title">
+✏️ Lápices
+</h2>
+
+<div class="products">
+
+<div class="product-card" data-product="Lápiz 1">
+<button class="favorite-btn">♡</button>
+<div class="product-image">
+<img src="lapiz1.jpeg">
+</div>
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -570,23 +624,23 @@ footer h3{
 
 <section class="section" id="contacto">
 
-    <div class="cta">
+<div class="cta">
 
-        <h2>
-            Haz tu pedido hoy 🎀
-        </h2>
+<h2>
+Haz tu pedido hoy 🎀
+</h2>
 
-        <p>
-            Contáctanos directamente por WhatsApp
-            y recibe atención personalizada.
-        </p>
+<p>
+Contáctanos directamente por WhatsApp
+y recibe atención personalizada.
+</p>
 
-        <a href="https://wa.me/18099727422"
-        class="btn-whatsapp">
-            Pedir por WhatsApp 📱
-        </a>
+<a href="https://wa.me/18099727422"
+class="btn-whatsapp">
+Pedir por WhatsApp 📱
+</a>
 
-    </div>
+</div>
 
 </section>
 
@@ -594,19 +648,90 @@ footer h3{
 
 <footer>
 
-    <h3>
-        Hecho con Amor 🎀
-    </h3>
+<h3>
+Hecho con Amor 🎀
+</h3>
 
-    <p>
-        Boutique artesanal de accesorios personalizados.
-    </p>
+<p>
+Boutique artesanal de accesorios personalizados.
+</p>
 
-    <p>
-        © 2026 Todos los derechos reservados
-    </p>
+<p>
+© 2026 Todos los derechos reservados
+</p>
 
 </footer>
+
+<!-- FAVORITOS -->
+
+<div class="favorite-bar">
+
+<button class="send-whatsapp" onclick="sendFavorites()">
+❤️ Enviar selección
+</button>
+
+</div>
+
+<script>
+
+let favorites = [];
+
+const buttons = document.querySelectorAll(".favorite-btn");
+
+buttons.forEach(button => {
+
+button.addEventListener("click", () => {
+
+const card = button.closest(".product-card");
+const product = card.dataset.product;
+
+button.classList.toggle("active");
+
+if(button.classList.contains("active")){
+
+button.innerHTML = "❤";
+
+if(!favorites.includes(product)){
+favorites.push(product);
+}
+
+}else{
+
+button.innerHTML = "♡";
+
+favorites = favorites.filter(item => item !== product);
+
+}
+
+});
+
+});
+
+function sendFavorites(){
+
+if(favorites.length === 0){
+
+alert("Selecciona al menos un producto ❤️");
+return;
+
+}
+
+let message = "Hola, me interesan estos modelos:%0A%0A";
+
+favorites.forEach(item => {
+
+message += "• " + item + "%0A";
+
+});
+
+window.open(
+"https://wa.me/18099727422?text=" + message,
+"_blank"
+);
+
+}
+
+</script>
 
 </body>
 </html>
