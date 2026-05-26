@@ -1037,44 +1037,59 @@ footer h3{
 
 let favorites = [];
 
-const favoriteButtons = document.querySelectorAll('.favorite-btn');
+// Cargar favoritos si existen (persistencia)
+const saved = localStorage.getItem("favorites");
+if (saved) {
+    favorites = JSON.parse(saved);
+}
 
-favoriteButtons.forEach(button => {
+// Aplicar estado visual inicial
+function updateUI() {
+    document.querySelectorAll('.product-card').forEach(card => {
+
+        const product = card.getAttribute('data-product');
+        const btn = card.querySelector('.favorite-btn');
+
+        if (favorites.includes(product)) {
+            btn.classList.add('active');
+            btn.innerHTML = '❤';
+        } else {
+            btn.classList.remove('active');
+            btn.innerHTML = '♡';
+        }
+
+    });
+
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+}
+
+// Evento de favoritos
+document.querySelectorAll('.favorite-btn').forEach(button => {
 
     button.addEventListener('click', () => {
 
         const card = button.closest('.product-card');
         const product = card.getAttribute('data-product');
 
-        button.classList.toggle('active');
+        const index = favorites.indexOf(product);
 
-        if(button.classList.contains('active')){
-
-            button.innerHTML = '❤';
-
-            if(!favorites.includes(product)){
-                favorites.push(product);
-            }
-
-        }else{
-
-            button.innerHTML = '♡';
-
-            favorites = favorites.filter(item => item !== product);
-
+        if (index === -1) {
+            favorites.push(product);
+        } else {
+            favorites.splice(index, 1);
         }
 
+        updateUI();
     });
 
 });
 
-function sendWhatsAppSelection(){
+// WhatsApp
+function sendWhatsAppSelection() {
 
-    if(favorites.length === 0){
-
+    if (favorites.length === 0) {
         alert("Selecciona al menos un producto ❤️");
         return;
-
     }
 
     let message = "Hola 🎀 Me interesan estos productos:%0A%0A";
@@ -1085,9 +1100,14 @@ function sendWhatsAppSelection(){
 
     const phone = "18099727422";
 
-    window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
-
+    window.open(
+        `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
+        '_blank'
+    );
 }
+
+// inicializar UI al cargar
+updateUI();
 
 </script>
 
